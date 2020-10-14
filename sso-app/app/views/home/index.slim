@@ -1,0 +1,10 @@
+.govuk-grid-row
+  .govuk-grid-column-two-thirds
+    h1.govuk-heading-l
+      | Shared auth prototype
+    p.govuk-body
+      | This is a spike example to evaluate how two or more applications can communicate authorisation of a user between them without the need to re-authorise the user when moving from one application to another.
+    p.govuk-body
+      = link_to users.sign_in_path, class: %i(govuk-button govuk-button--start)
+        | Sign-in
+        = govuk_chevron

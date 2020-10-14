@@ -1,0 +1,17 @@
+{
+  "name": "early_career_framework",
+  "private": true,
+  "scripts": {
+    "publishToHeroku": "cd ../ && git subtree push --prefix consumer-app consumer master || true"
+  },
+  "dependencies": {
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.3.0",
+    "govuk-frontend": "^3.9.1",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}

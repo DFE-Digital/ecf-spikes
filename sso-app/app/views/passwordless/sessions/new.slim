@@ -1,0 +1,11 @@
+.govuk-grid-row
+  .govuk-grid-column-two-thirds
+    h1.govuk-heading-l
+      | Email sign-in
+    = form_for @session, url: send(Passwordless.mounted_as).sign_in_path do |f|
+      div.govuk-form-group
+        h4.govuk-label-wrapper
+          label.govuk-label.govuk-label--s
+            | Your email address
+        = text_field_tag :"passwordless[#{@email_field}]", params.fetch(:"passwordless[#{@email_field}]", nil), class: 'govuk-input'
+      = f.submit I18n.t('passwordless.sessions.new.submit'), class: "govuk-button", 'data-module' => 'govuk-button'
